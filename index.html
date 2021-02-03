@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ball</title>
+    <link rel="stylesheet" href="/style/style.css" />
+  </head>
+  <body>
+    <div class="cursor">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script>
+      document.body.addEventListener("mousemove", (e) => {
+        gsap.to(".circle", {
+          x: e.clientX,
+          y: e.clientY,
+          stagger: -0.05,
+        });
+      });
+    </script>
+  </body>
+</html>
